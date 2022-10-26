@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário SEM JavaScript</title>
+    <script type="text/javascript">
+        nome1=window.prompt("Qual é o seu nome?");
+        if(nome1 != null && nome1 != ""){
+            document.write(<h1>"Olá, "+nome1+"!"</h1>);
+        } else {
+            document.write("Olá, visitante!");
+        }
+
+        function validar() {
+            if(document.cadastro.nome.value == "" && document.cadastro.email.value != "") {
+                window.alert("Você deve preencher o campo Nome.");
+                document.cadastro.nome.focus();
+                return false;
+            } else if(document.cadastro.email.value == "" && document.cadastro.nome.value != "") {
+                window.alert("Você deve preencher o campo Email.");
+                document.cadastro.email.focus();
+                return false;
+            } else if(document.cadastro.nome.value == "" && document.cadastro.email.value == ""){
+                window.alert("Você deve preencher os campos Nome e Email!");
+                document.cadastro.nome.focus();
+                document.cadastro.email.focus();
+                return false;
+            }
+        }
+
+        function limpar() {
+            document.cadastro.nome.value = "";
+            document.cadastro.email.value = "";
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div {
+            margin: 15px;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="mailto:teste@gmail.com" method="post" enctype="text/plain" name="cadastro">
+        <p>
+            Preencha os campos abaixo e clique em Enviar. Para apagar os dados, clique em limpar. <br>
+        </p>
+        <div>Nome: <input type="text" name="nome" size="35"></div>
+        <div>Email: <input type="text" name="email" size="35"></div>
+        <input type="submit" onclick="validar();" value="Enviar">
+        <input type="submit" onclick="limpar()" value="Limpar">
+    </form>
+</body>
+</html>
