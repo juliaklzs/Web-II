@@ -9,8 +9,13 @@
 <body>
     <script type="text/javascript">
         function trocaLampada() {
-            document.getElementById("lampada")
+            if(document.getElementById("lampada").src = "img/lampada_acesa.jpg"){
+                document.getElementById("lampada").src = "img/lampada_apagada.jpg"
+            } else {
+                document.getElementById("lampada").src = "img/lampada_acesa.jpg" //o else não funcionou :(
+            }
         }
+    document.getElementById("lampada").addEventListener("click", trocaLampada)
     </script>
     <p>
         <img id="lampada" onclick="trocaLampada()" src="img/lampada_acesa.jpg" width="140" height="180" alt="lâmpada acesa">
