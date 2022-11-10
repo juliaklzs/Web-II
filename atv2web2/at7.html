@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,33 @@
     <title>Aniversário</title>
 </head>
 <body>
-    
+    <script>
+        function idade(anoAn, mesAn, diaAn) {
+            var dt = new Date;
+            ano = dt.getFullYear();
+            mes = dt.getMonth();
+            dia = dt.getDate();
+
+            document.getElementById("diaNasc");
+            document.getElementById("mesNasc");
+            document.getElementById("anoNasc");
+
+            anoAn = parseInt(anoNasc.value);
+            mesAn = parseInt(mesNasc.value);
+            diaAn = parseInt(diaNasc.value);
+
+            idade = ano - anoAn;
+            
+            if (mes < mesAn || mes == mesAn && dia < diaAn) {
+                idade -= 1;
+            }
+            document.write(idade);
+        }
+    </script>
+    <h1>Insira sua data de nascimento:</h1>
+    <input type="text" id="diaNasc">/
+    <input type="text" id="mesNasc">/
+    <input type="text" id="anoNasc">
+    <button onclick="idade()">Calcular a idade</button>
 </body>
 </html>
