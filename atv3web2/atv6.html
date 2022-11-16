@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Atividade 6</title>
+    <style>
+    #contador{
+    text-align: center;
+    background-color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    width: 160px;
+    }
+    </style>
+    </head>
+    <body>
+    <script type="text/javascript">
+        var contagem = ['Fiiim de papo!!!','Um','Dois','Três','Quatro','Cinco'];
+        var indice = contagem.length - 1;
+        function regressiva() {
+            if(indice < 0) {
+            return false;
+        }
+    document.getElementById("contador").innerHTML =
+    contagem[indice];
+    if(indice == 0){
+    document.getElementById("contador").style = "background-color: red;";
+    }
+    indice = indice - 1;
+    }
+    setInterval(regressiva, 1000);
+    </script>
+    <div id="contador" ></div>
+    </body>

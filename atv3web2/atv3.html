@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor</title>
+</head>
+<body id="corpo">
+    <script>
+        function geraLista() {
+            var vetor = ["Fulano", "Beltrano", "Ciclano"];
+            var lista = document.getElementById("lista");
+
+            for (i = 0; i < vetor.length; i++) {
+                var topico = document.createElement('li');
+                topico.appendChild(document.createTextNode(vetor[i]));
+                lista.appendChild(topico);
+            }
+        }
+    </script>
+
+    <ul id="lista"></ul>
+    <input type="button" onclick="geraLista()" value="Gerar a Lista">
+</body>
+</html>
