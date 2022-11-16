@@ -5,11 +5,11 @@
     <title>Atividade 6</title>
     <style>
     #contador{
-    text-align: center;
-    background-color: yellow;
-    font-size: 20px;
-    font-weight: bold;
-    width: 160px;
+        text-align: center;
+        background-color: yellow;
+        font-size: 20px;
+        font-weight: bold;
+        width: 160px;
     }
     </style>
     </head>
@@ -21,12 +21,12 @@
             if(indice < 0) {
             return false;
         }
-    document.getElementById("contador").innerHTML =
-    contagem[indice];
-    if(indice == 0){
-    document.getElementById("contador").style = "background-color: red;";
-    }
-    indice = indice - 1;
+        document.getElementById("contador").innerHTML =
+        contagem[indice];
+        if(indice == 0){
+            document.getElementById("contador").style = "background-color: red;";
+        }
+        indice = indice - 1;
     }
     setInterval(regressiva, 1000);
     </script>
