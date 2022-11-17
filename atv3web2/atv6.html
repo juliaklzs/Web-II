@@ -3,15 +3,6 @@
     <head>
     <meta charset="UTF-8">
     <title>Atividade 6</title>
-    <style>
-    #contador{
-        text-align: center;
-        background-color: yellow;
-        font-size: 20px;
-        font-weight: bold;
-        width: 160px;
-    }
-    </style>
     </head>
     <body>
     <script type="text/javascript">
@@ -28,13 +19,13 @@
         var img0 = new Image();
         img1.src = "juliaklzs/Web-II/atv3web2/img/0.png";
 
-        var contagem = [img5, img4, img3, img2, img1, img0];
+        var contagem = [img5.png, img4.png, img3.png, img2.png, img1.png, img0.png];
         var indice = contagem.length - 1;
         function regressiva() {
             if(indice < 0) {
             return false;
         }
-        document.getElementById("contador").innerHTML =
+        document.getElementById("contador").src =
         contagem[indice];
         if(indice == 0){
             document.getElementById("contador").style = "background-color: red;";
@@ -43,5 +34,5 @@
     }
     setInterval(regressiva, 1000);
     </script>
-    <div id="contador" ></div>
+    <img id="contador" ></img>
     </body>
