@@ -10,9 +10,6 @@
             background: url("img/cenario.png") no-repeat center center fixed;
             background-size: cover;
         }
-        img {
-            position: relative;
-        }
     </style>
 </head>
 <body>
@@ -20,12 +17,11 @@
         var elemento = document.getElementById("animacao");
         elemento.style.position = 'absolute';
 
-        //var animImgs = [src="img/urso-1.png", src="img/urso-2.png", src="img/urso-3.png"];
         //indice = 1
         //elemento.src = `urso-${indice}.png`
 
         for (i=1; i=3;i++) {
-            elemento.src = `urso-${i}.png`
+            elemento.src = `img/urso-${i}.png`;
         }
 
     </script>
