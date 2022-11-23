@@ -15,14 +15,9 @@
 </head>
 <body>
     <script type="text/javascript">
-        var elemento = document.getElementById("animacao");  
-        //indice = 1
-        //elemento.src = `urso-${indice}.png`;
-
         for (i=1; i=3;i++) {
-            elemento.src = `img/urso-${i}.png`;
+            document.getElementById("animacao").src = `img/urso-${i}.png`;
         }
-        
     </script>
 
     <img id="animacao"></img>
